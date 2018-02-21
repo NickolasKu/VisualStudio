@@ -374,16 +374,6 @@ namespace GitHub.VisualStudio.Views.GitHubPane
             }
         }
 
-        void ViewCommentsClick(object sender, RoutedEventArgs e)
-        {
-            var model = (object)ViewModel.Model;
-            GitHub.VisualStudio.Services.Dte.Commands.Raise(
-                Guids.CommandSetString,
-                PkgCmdIDList.ShowPullRequestCommentsId,
-                ref model,
-                null);
-        }
-
         async void ViewFileCommentsClick(object sender, RoutedEventArgs e)
         {
             try
